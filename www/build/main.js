@@ -54,7 +54,6 @@ var ChatPage = /** @class */ (function () {
     };
     ChatPage.prototype.ionViewWillLeave = function () {
         console.log('user is about to go');
-        console.log(this._chatSubscription);
         this._chatSubscription.unsubscribe();
         this.db.list('/chat').push({
             specialMessage: true,
@@ -70,7 +69,7 @@ var ChatPage = /** @class */ (function () {
     };
     ChatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-chat',template:/*ion-inline-start:"/Users/johnson/workspace/ionic/chat/src/pages/chat/chat.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>chat</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div id="chatMessages">\n    <div class="message" *ngFor="let message of messages" [class]="message.specialMessage ? \'message special\' : \'message\'">\n      <div [class]="message.username == username ? \'innerMessage messageRight\' : \'innerMessage messageLeft\'">\n        <div class="username">{{message.username}}</div>\n        <div class="messageContent">{{message.message}}</div>\n      </div>\n    </div>\n  </div>\n\n</ion-content>\n\n  <ion-footer>\n    <ion-toolbar>\n      <div id="footer">\n        <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>\n        <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button></div>\n      </div>\n    </ion-toolbar>\n  </ion-footer>\n'/*ion-inline-end:"/Users/johnson/workspace/ionic/chat/src/pages/chat/chat.html"*/,
+            selector: 'page-chat',template:/*ion-inline-start:"/Users/johnson/ionic_chat/src/pages/chat/chat.html"*/'\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>chat</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div id="chatMessages">\n    <div class="message" *ngFor="let message of messages" [class]="message.specialMessage ? \'message special\' : \'message\'">\n      <div [class]="message.username == username ? \'innerMessage messageRight\' : \'innerMessage messageLeft\'">\n        <div class="username">{{message.username}}</div>\n        <div class="messageContent">{{message.message}}</div>\n      </div>\n    </div>\n  </div>\n\n</ion-content>\n\n  <ion-footer>\n    <ion-toolbar>\n      <div id="footer">\n        <div class="elem"><ion-input type="text" [(ngModel)]="message"></ion-input></div>\n        <div class="elem"><button ion-button icon-only (click)="sendMessage()"><ion-icon name="send"></ion-icon></button></div>\n      </div>\n    </ion-toolbar>\n  </ion-footer>\n'/*ion-inline-end:"/Users/johnson/ionic_chat/src/pages/chat/chat.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_angularfire2_database__["AngularFireDatabase"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ChatPage);
@@ -169,7 +168,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/johnson/workspace/ionic/chat/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Chatting Application</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <p> Enter yout username </p>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n  </ion-list>\n\n    <button ion-button block outline (click)="loginUser()">Login</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/johnson/workspace/ionic/chat/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/johnson/ionic_chat/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>Chatting Application</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <p> Enter yout username </p>\n\n  <ion-list>\n\n    <ion-item>\n      <ion-label floating>Username</ion-label>\n      <ion-input type="text" [(ngModel)]="username"></ion-input>\n    </ion-item>\n  </ion-list>\n\n    <button ion-button block outline (click)="loginUser()">Login</button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/johnson/ionic_chat/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* AlertController */]])
     ], HomePage);
@@ -310,7 +309,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/johnson/workspace/ionic/chat/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/johnson/workspace/ionic/chat/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/Users/johnson/ionic_chat/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/johnson/ionic_chat/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
